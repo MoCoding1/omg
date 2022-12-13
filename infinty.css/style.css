@@ -1,0 +1,78 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+section
+{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+section i
+{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: #222;
+}
+section i:nth-child(5n+1)
+{
+    animation: animate 2s linear infinite, animationBg 5s linear infinite;
+    animation-delay: calc(-1s * var(--i));
+}
+section i:nth-child(5n+2)
+{
+    animation: animate 3s linear infinite, animationBg 5s linear infinite;
+    animation-delay: calc(-1.5s * var(--i));
+}
+section i:nth-child(5n+3)
+{
+    animation: animate 4s linear infinite, animationBg 5s linear infinite;
+    animation-delay: calc(-2s * var(--i));
+}
+section i:nth-child(5n+4)
+{
+    animation: animate 5s linear infinite, animationBg 5s linear infinite;
+    animation-delay: calc(-2.5s * var(--i));
+}
+section i:nth-child(5n+5)
+{
+    animation: animate 6s linear infinite, animationBg 5s linear infinite;
+    animation-delay: calc(-3s * var(--i));
+}
+@keyframes animate
+{
+    0%,20%
+    {
+        background: rgb(224, 3, 3);
+    }
+    60%
+    {
+        background: #0f0;
+    }
+    80%,20%
+    {
+        background: rgb(14, 28, 90);
+    }
+}
+@keyframes animationBg
+{
+    0%
+    {
+        filter: hue-rotate(0deg);
+    }
+    100%
+    {
+        filter: hue-rotate(360);
+    }
+}
+
+
+/*end task*/
